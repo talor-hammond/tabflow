@@ -4,6 +4,7 @@
 // -- Give user ability to add a tab to a workflow from the page they are on within the extension
 // -- Initiate multiple workflows in different windows, or tabs in different windows per one workflow
 // -- Authentication and persistence of workflow data
+// -- Have the pop-up display when a user opens Chrome for the first time
 
 import React, { Component } from 'react'
 
@@ -19,7 +20,14 @@ class App extends Component {
   }
 
   componentDidMount () {
-    console.log(window.chrome.tabs)
+    const tab = {
+      // index: 0,
+      url: 'https://developer.chrome.com/extensions/tabs#method-create',
+      active: true,
+      pinned: false
+    }
+
+    window.chrome.tabs.create(tab)
   }
 
   render () {
