@@ -11,9 +11,9 @@ import React, { Component } from 'react'
 import './index.css'
 
 // Components:
-import PopOut from './components/PopOut'
+import PopOut from './components/PopOut.tsx'
 
-class App extends Component {
+class App extends Component <{}> {
   render () {
     return (
       <PopOut />
