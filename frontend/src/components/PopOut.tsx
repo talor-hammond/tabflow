@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class PopOut extends Component {
+class PopOut extends Component <{}> {
   componentDidMount () {
     // const tab = {
     //   // windowId: The window in which to create the new tab. Defaults to the current window.
